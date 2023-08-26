@@ -40,10 +40,16 @@ docker volume prune
 docker image prune
 ```
 ```console
+docker container ls
+docker volume ls
+docker image ls
+```
+```console
 docker compose up
 docker compose down
 ```
 ```console
 docker compose start
+docker compose restart
 docker compose stop
 ```
