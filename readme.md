@@ -22,3 +22,12 @@ wsl --terminate, -t <DISTRO>
 git config --global user.name "NAME"
 git config --global user.email "EMAIL"
 ```
+
+## Docker
+```console
+docker compose up
+docker compose down
+docker compose start
+docker compose restart
+docker compose stop
+```
