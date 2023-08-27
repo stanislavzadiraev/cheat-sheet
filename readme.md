@@ -23,9 +23,6 @@ wsl --unregister <DISTRO>
 wsl --distribution, -d <DISTRO>
 wsl --terminate, -t <DISTRO>
 ```
-```console
-wsl --shutdown
-```
 ## Git
 ```console
 git config --global user.name "NAME"
