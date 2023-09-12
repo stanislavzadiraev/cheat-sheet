@@ -1,51 +1,51 @@
 # Разное
 
 ## 777
-```console
+```bash
 chmod -R 777 DIR
 ```
 
 ## WSL
-```console
+```bash
 wsl
 wsl --status
 wsl --shutdown
 ```
-```console
+```bash
 wsl --list --verbose
 wsl --list --online
 ```
-```console
+```bash
 wsl --install <DISTRO>
 wsl --unregister <DISTRO>
 ```
-```console
+```bash
 wsl --distribution, -d <DISTRO>
 wsl --terminate, -t <DISTRO>
 ```
 ## Git
-```console
+```bash
 git config --global user.name "NAME"
 git config --global user.email "EMAIL"
 ```
 
 ## Docker
-```console
+```bash
 docker system prune
 docker container prune
 docker volume prune
 docker image prune
 ```
-```console
+```bash
 docker container ls
 docker volume ls
 docker image ls
 ```
-```console
+```bash
 docker compose up
 docker compose down
 ```
-```console
+```bash
 docker compose start
 docker compose restart
 docker compose stop
