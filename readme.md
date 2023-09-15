@@ -1,51 +1,53 @@
 # Разное
 
 ## 777
-```bash
+```console
 chmod -R 777 DIR
 ```
 
 ## WSL
-```bash
-wsl
-wsl --status
-wsl --shutdown
+```console
+wsl --status # состоятние
+wsl --shutdown # выключение
+
+wsl --list --verbose # перечисление местных
+wsl --list --online # перечисление удаленных
+
+wsl --install DISTRO # установка
+wsl --unregister DISTRO # удаление
+
+wsl --distribution, -d DISTRO # запуск
+wsl --terminate, -t DISTRO # остановка
 ```
-```bash
-wsl --list --verbose
-wsl --list --online
+Импорт файла образа `PATH\DISTRO\ext4.vhdx`:
+```console
+wsl --import-in-place DISTRO PATH\DISTRO\ext4.vhdx
 ```
-```bash
-wsl --install <DISTRO>
-wsl --unregister <DISTRO>
-```
-```bash
-wsl --distribution, -d <DISTRO>
-wsl --terminate, -t <DISTRO>
+Настройка неупоминаемого пользователя `/etc/wsl.conf`:
+```console
+[user]
+default=NAME
 ```
 ## Git
-```bash
+```console
 git config --global user.name "NAME"
 git config --global user.email "EMAIL"
 ```
 
 ## Docker
-```bash
+```console
 docker system prune
 docker container prune
 docker volume prune
 docker image prune
-```
-```bash
+
 docker container ls
 docker volume ls
 docker image ls
-```
-```bash
+
 docker compose up
 docker compose down
-```
-```bash
+
 docker compose start
 docker compose restart
 docker compose stop
