@@ -1,11 +1,16 @@
 # Разное
 
-## 777
-```console
-chmod -R 777 DIR
-```
-
 ## WSL
+Подключение тома файловой системы `PATH\DISTRO\ext4.vhdx`:
+```console
+wsl --import-in-place DISTRO PATH\DISTRO\ext4.vhdx
+```
+Настройка неупоминаемого пользователя `/etc/wsl.conf`:
+```console
+[user]
+default=NAME
+```
+///
 ```console
 wsl --status # состоятние
 wsl --shutdown # выключение
@@ -19,22 +24,26 @@ wsl --unregister DISTRO # удаление
 wsl --distribution, -d DISTRO # запуск
 wsl --terminate, -t DISTRO # остановка
 ```
-Импорт файла образа `PATH\DISTRO\ext4.vhdx`:
-```console
-wsl --import-in-place DISTRO PATH\DISTRO\ext4.vhdx
-```
-Настройка неупоминаемого пользователя `/etc/wsl.conf`:
-```console
-[user]
-default=NAME
-```
 ## Git
+настройка:
 ```console
 git config --global user.name "NAME"
 git config --global user.email "EMAIL"
 ```
-
+---
 ## Docker
+установка:
+```console
+sudo snap install docker --classic
+```
+настройка:
+```
+sudo groupadd docker
+sudo usermod --append --groups docker $USER
+# точно требуется выход пользователя из истемы
+# возможно требуется презагрузка системы
+```
+///
 ```console
 docker system prune
 docker container prune
@@ -52,3 +61,4 @@ docker compose start
 docker compose restart
 docker compose stop
 ```
+ 
