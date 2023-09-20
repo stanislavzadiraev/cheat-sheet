@@ -36,7 +36,7 @@ git config --global user.email "EMAIL"
 ```console
 sudo snap install docker --classic
 ```
-настройка:
+подготовка:
 ```
 sudo groupadd docker
 sudo usermod --append --groups docker $USER
